@@ -1,0 +1,23 @@
+.Homepage{
+    background: linear-gradient(300deg, #ff605f, #ffce76 80%);
+    position: absolute;
+    top: 0;
+
+}
+
+* {
+  font-family: Bauer Bodoni;
+  font-style: normal;
+  font-weight: 800;
+}
+
+p.startButton:hover{
+    background-color:#ff605f !important;
+    color:white !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .homepage_text{
+        width:80% !important;
+    }
+  }

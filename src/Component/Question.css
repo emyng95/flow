@@ -4,24 +4,55 @@ ul {
 }
 
 .section {
-  background: linear-gradient(230deg, #ff605f -0.21%, #ffce76 99.79%);
+  background:  linear-gradient(300deg, #ff605f, #ffce76 80%);
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-content: center;
   flex-wrap: wrap;
+  justify-content:center
+
 }
 
 .question {
   font-family: Bauer Bodoni;
   font-style: normal;
   font-weight: 500;
-  font-size: 3.2em;
+  font-size: 2.4em;
+  width: 100%;
   line-height: 1.5em;
   text-align: center;
-  color: #1e1c1c;
-  margin: auto 25%;
+  /* color: #414141; */
+  color: white;
+  margin: auto;
+  margin-top:10%;
   user-select: none;
+  z-index: 100;
+  padding-left: 20%;
+  padding-right: 20%;
 }
+
+.backButton{
+  z-index: 100;
+  margin: auto;
+  position: relative;
+  top: 5%;
+  font-size:1.2em; 
+  display: block; 
+  color:#414141; 
+  padding:0.5em 1em; 
+  border-radius:10px; 
+  text-decoration:none;
+  border:none;
+  background-color: Transparent;
+
+}
+
+/* .backButton:hover{
+  background-color:#ff605f !important;
+  color:white !important; 
+
+} */
 
 .ans-selection {
   display: flex;
@@ -29,15 +60,11 @@ ul {
   justify-content: space-between;
   text-align: center;
   flex-wrap: wrap;
-  margin: 60px 25%;
+  margin: 80px 25%;
+  z-index: 100;
 }
 
 .ans {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 150px;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -47,9 +74,10 @@ ul {
   font-weight: 500;
   font-size: 1.5em;
   position: relative;
-  width: fit-content;
+  width: 10vw;
+  height:10vw;
+  line-height: 10vw;
   margin: auto;
-  top: 40%;
   pointer-events: none;
   user-select: none;
 }
@@ -59,9 +87,6 @@ ul {
   width: 10vw;
   height: 10vw;
   border-radius: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
 }
 
@@ -74,17 +99,55 @@ ul {
   justify-content: center;
   align-items: center;
   position: absolute;
-  box-shadow: 0 0 60px 10px rgba(170, 34, 34, 0.76),
+  box-shadow: 0 0 60px 10px #ED7271,
     0 0 100px 10px rgba(255, 95, 95, 0.363),
     0 0 140px 5px rgba(255, 255, 255, 0.24) !important;
+}
+
+.none{
+  display: none;
+  user-select: none;
+}
+
+#none{
+  display: none;
+}
+
+#margin_auto{
+  margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
   .question {
     margin: auto 10%;
     font-size: 1.5em;
+    padding: 0;
   }
+  
   .section {
     background: linear-gradient(250deg, #ff605f -20.1%, #ffce76 99.79%);
   }
+
+  .ans-selection{
+    margin: 15% 15%;
+  }
+
+  .circle {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .circled {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .ans_text {
+    width: 25vw;
+    height: 25vw;
+    line-height: 25vw;
+  }
+
+
+
 }
