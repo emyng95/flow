@@ -3,6 +3,15 @@ ul {
   padding: 0;
 }
 
+.true{
+  display: inline;
+
+}
+
+.false{
+  display: none;
+}
+
 .section {
   background:  linear-gradient(300deg, #ff605f, #ffce76 80%);
   height: 100vh;
@@ -112,6 +121,11 @@ ul {
 #none{
   display: none;
 }
+
+#white{
+  color:white;
+}
+
 
 #margin_auto{
   margin: auto;

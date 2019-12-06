@@ -11,10 +11,38 @@ import {
 import "./Quiz.css";
 import Question from "./Question";
 
-
 import sandiego from "../assets/sandiego.jpg";
+import seattle from "../assets/seattle.jpg";
+import losangeles from "../assets/losangeles.jpg";
+import bloomington from "../assets/bloomington.jpg";
+import washington from "../assets/washington.jpg";
+import chicago from "../assets/chicago.jpg";
+import hawaii from "../assets/hawaii.jpg";
+import newjersey from "../assets/newjersey.jpg";
+import florida from "../assets/florida.jpg";
+import montana from "../assets/montana.jpg";
+import michigan from "../assets/michigan.jpg";
+import page from "../assets/page.jpg";
 
-// Little helpers ...
+import copenhagen from "../assets/copenhagen.jpg";
+import iceland from "../assets/iceland.jpg";
+import england from "../assets/england.jpg";
+import rome from "../assets/rome.jpg";
+import italy from "../assets/italy.jpg";
+import interlaken from "../assets/interlaken.jpg";
+import borabora from "../assets/borabora.jpg";
+import auckland from "../assets/auckland.jpg";
+import mexico from "../assets/mexico.jpg";
+import turkey from "../assets/turkey.jpg";
+import vietnam from "../assets/vietnam.jpg";
+import bangkok from "../assets/bangkok.jpg";
+import chengdu from "../assets/chengdu.jpg";
+import guangzhou from "../assets/guangzhou.jpg";
+import seoul from "../assets/seoul.jpg";
+import kyoto from "../assets/kyoto.jpg";
+import { chain } from "popmotion";
+
+// Little helpers ...rome
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 
 const scrollDuration = 500;
@@ -33,6 +61,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section2", status: "circle" },
         ans_2Class: "circle",
         shown: true,
+        blackdrop:"none",
         id: "section0"
       },
       {
@@ -42,6 +71,7 @@ class Quiz extends Component {
         ans_2: { text: "Towns", next_q: "section4", status: "circle" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section1"
       },
       {
@@ -51,6 +81,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section6" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section2"
       },
       {
@@ -60,6 +91,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section8" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section3"
       },
       {
@@ -69,6 +101,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section10" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section4"
       },
       {
@@ -78,6 +111,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section12" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section5"
       },
       {
@@ -86,6 +120,7 @@ class Quiz extends Component {
         ans_1Class: "circle",
         ans_2: { text: "Nature Lover", next_q: "section14" },
         ans_2Class: "circle",
+        blackdrop:"none",
         shown: false,
         id: "section6"
       },
@@ -96,6 +131,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section16" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section7"
       },
       {
@@ -105,6 +141,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section18" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section8"
       },
       {
@@ -114,6 +151,7 @@ class Quiz extends Component {
         ans_2: { text: "East", next_q: "section20" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section9"
       },
       {
@@ -123,6 +161,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section22" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section10"
       },
       {
@@ -132,6 +171,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section24" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section11"
       },
       {
@@ -141,6 +181,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section26" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section12"
       },
       {
@@ -150,6 +191,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section28" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section13"
       },
       {
@@ -159,6 +201,7 @@ class Quiz extends Component {
         ans_2: { text: "Calm", next_q: "section30" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section14"
       },
       {
@@ -170,6 +213,7 @@ class Quiz extends Component {
         ans_id: "none",
         question_id: "margin_auto",
         img:sandiego,
+        white:"white",
         shown: false,
         id: "section15"
       },
@@ -181,7 +225,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
-        
+        img:seattle,
+        white:"white",
         shown: false,
         id: "section16"
       },
@@ -191,6 +236,7 @@ class Quiz extends Component {
         ans_1Class: "circle",
         ans_2: { text: "Mall", next_q: "section32" },
         ans_2Class: "circle",
+        blackdrop:"none",
         shown: false,
         id: "section17"
       },
@@ -201,6 +247,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section34" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section18"
       },
       {
@@ -211,6 +258,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:hawaii,
+        white:"white",
         shown: false,
         id: "section19"
       },
@@ -221,6 +270,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section36" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section20"
       },
       {
@@ -230,6 +280,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section38" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section21"
       },
       {
@@ -240,6 +291,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:page,
+        white:"white",
         shown: false,
         id: "section22"
       },
@@ -250,6 +303,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section40" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section23"
       },
       {
@@ -259,6 +313,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section42" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section24"
       },
       {
@@ -268,6 +323,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section44" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section25"
       },
       {
@@ -277,6 +333,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section46" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section26"
       },
       {
@@ -287,6 +344,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:vietnam,
+        white:"white",
         shown: false,
         id: "section27"
       },
@@ -298,6 +357,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:bangkok,
+        white:"white",
         shown: false,
         id: "section28"
       },
@@ -308,6 +369,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section48" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section29"
       },
       {
@@ -317,6 +379,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section50" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section30"
       },
       {
@@ -327,6 +390,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:losangeles,
+        white:"white",
         shown: false,
         id: "section31"
       },
@@ -338,6 +403,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:bloomington,
+        white:"white",
         shown: false,
         id: "section32"
       },
@@ -349,6 +416,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:washington,
+        white:"white",
         shown: false,
         id: "section33"
       },
@@ -360,6 +429,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:chicago,
+        white:"white",
         shown: false,
         id: "section34"
       },
@@ -371,6 +442,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:newjersey,
+        white:"white",
         shown: false,
         id: "section35"
       },
@@ -382,6 +455,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:florida,
+        white:"white",
         shown: false,
         id: "section36"
       },
@@ -393,6 +468,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:montana,
+        white:"white",
         shown: false,
         id: "section37"
       },
@@ -404,6 +481,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:michigan,
+        white:"white",
         shown: false,
         id: "section38"
       },
@@ -415,6 +494,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:copenhagen,
+        white:"white",
         shown: false,
         id: "section39"
       },
@@ -426,6 +507,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:iceland,
+        white:"white",
         shown: false,
         id: "section40"
       },
@@ -436,6 +519,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section52" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section41"
       },
       {
@@ -445,6 +529,7 @@ class Quiz extends Component {
         ans_2: { text: "No", next_q: "section54" },
         ans_2Class: "circle",
         shown: false,
+        blackdrop:"none",
         id: "section42"
       },
       {
@@ -455,6 +540,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:borabora,
+        white:"white",
         shown: false,
         id: "section43"
       },
@@ -466,6 +553,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:auckland,
+        white:"white",
         shown: false,
         id: "section44"
       },
@@ -477,6 +566,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:mexico,
+        white:"white",
         shown: false,
         id: "section45"
       },
@@ -488,6 +579,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:turkey,
+        white:"white",
         shown: false,
         id: "section46"
       },
@@ -499,6 +592,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:chengdu,
+        white:"white",
         shown: false,
         id: "section47"
       },
@@ -510,6 +605,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:guangzhou,
+        white:"white",
         shown: false,
         id: "section48"
       },
@@ -521,6 +618,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:seoul,
+        white:"white",
         shown: false,
         id: "section49"
       },
@@ -532,6 +631,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:kyoto,
+        white:"white",
         shown: false,
         id: "section50"
       },
@@ -543,6 +644,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:england,
+        white:"white",
         shown: false,
         id: "section51"
       },
@@ -554,6 +657,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:rome,
+        white:"white",
         shown: false,
         id: "section52"
       },
@@ -565,6 +670,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:italy,
+        white:"white",
         shown: false,
         id: "section53"
       },
@@ -576,6 +683,8 @@ class Quiz extends Component {
         ans_2Class: "none",
         ans_id: "none",
         question_id: "margin_auto",
+        img:interlaken,
+        white:"white",
         shown: false,
         id: "section54"
       }

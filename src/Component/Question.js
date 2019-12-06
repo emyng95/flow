@@ -1,6 +1,4 @@
 import React from "react";
-
-import { Parallax, ParallaxLayer } from 'react-spring/addons';
 import "./Question.css";
 import Circle from "./Circle";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -13,10 +11,12 @@ const question = props => {
   return (
     <div className="section">
       
-      <div className="img" style={{ backgroundImage: "url(" + props.section.img + ")", backgroundSize: 'cover', position:'absolute', width:'100vw',height:'100vh',opacity:'0.3'}}>
+      <div className="img" style={{ backgroundImage: "url(" + props.section.img + ")", backgroundSize: 'cover', position:'absolute', width:'100vw',height:'100vh',opacity:'1'}}>
   
       </div>
       <div className="img" style={{ backgroundImage: url('stars', true), backgroundSize: 'cover', position:'absolute', width:'100vw',height:'100vh'}}>
+      </div>
+      <div className={props.section.blackdrop} style={{ backgroundColor:'black', opacity:'0.6', backgroundSize: 'cover', position:'absolute', width:'100vw',height:'100vh'}}>
       </div>
       <div className="question" id={props.section.question_id}>{props.section.question}</div>
       <div className="ans-selection" id={props.section.ans_id}>
@@ -45,7 +45,7 @@ const question = props => {
         </div>
         
       </div>
-      <button className="backButton" onClick={e => props.backClicked(e, props.id)}> {'< Back'}</button>
+      <button className="backButton" id={props.section.white} onClick={e => props.backClicked(e, props.id)}> {'< Back'}</button>
     </div>
   );
 };
