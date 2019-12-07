@@ -65,8 +65,8 @@ class Quiz extends Component {
         id: "section0"
       },
       {
-        question: "Do you want to visit big city or small towns?",
-        ans_1: { text: "City", next_q: "section3", status: "circle" },
+        question: "Do you prefer big cities or small towns?",
+        ans_1: { text: "Cities", next_q: "section3", status: "circle" },
         ans_1Class: "circle",
         ans_2: { text: "Towns", next_q: "section4", status: "circle" },
         ans_2Class: "circle",
@@ -241,7 +241,7 @@ class Quiz extends Component {
         id: "section17"
       },
       {
-        question: "Do you enjoy prefer museums over skyscrapers?",
+        question: "Do you prefer museums over skyscrapers?",
         ans_1: { text: "Yes", next_q: "section33" },
         ans_1Class: "circle",
         ans_2: { text: "No", next_q: "section34" },
