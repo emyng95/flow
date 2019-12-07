@@ -116,9 +116,9 @@ class Quiz extends Component {
       },
       {
         question: "Are you on a tight budget?",
-        ans_1: { text: "Connoisser", next_q: "section13" },
+        ans_1: { text: "Yes", next_q: "section13" },
         ans_1Class: "circle",
-        ans_2: { text: "Nature Lover", next_q: "section14" },
+        ans_2: { text: "No", next_q: "section14" },
         ans_2Class: "circle",
         blackdrop:"none",
         shown: false,
