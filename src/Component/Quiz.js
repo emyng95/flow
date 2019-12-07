@@ -62,6 +62,7 @@ class Quiz extends Component {
         ans_2Class: "circle",
         shown: true,
         blackdrop:"none",
+        white:"none",
         id: "section0"
       },
       {
