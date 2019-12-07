@@ -28,8 +28,8 @@ class Homepage extends Component {
         <ParallaxLayer
           offset={0}
           speed={0.1}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex:'100',cursor:'pointer'}}>
-           <p className="homepage_text" style={{ fontSize:'calc(20px + 2vmin)', display: 'block', width: '40%', color:'white', userSelect:'none'}} >
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex:'100'}}>
+           <p style={{ fontSize:'calc(20px + 2vmin)', display: 'block', width: '40%', color:'white', userSelect:'none'}} >
             Can't decide where to go for your next vacation?
             </p>
         </ParallaxLayer>
